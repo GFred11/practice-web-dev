@@ -1,24 +1,52 @@
 /* 1. Global reset: Removes weird default browser margins */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box; /* makes the box model behave predictably */
 }
 
 /* 2. style the main body background to match Nike's dark theme */
-body{
+body {
     background-color: #111; /* dark background */
     color: #fff; /* white text */
     font-family: Arial, Helvetica, sans-serif;
 }
 
 /* 3. The product Card: applying the box model! */
-.product-card{
+.product-card {
     background-color: #1a1a1a; /* Slightly lighter dark box */
     border: 1px solid #333; /* the Border layer */
     padding: 20px;  /* the padding layer (bubble wrap inside) */
     margin: 15px;   /*the margin layer (breathing room outside) */
     width: 300px;
     border-radius: 8px; /* Softens the square corners */
+}
+
+/* 4. Fix the giant images so they fit nicely inside the card */
+.product-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* 5. Put the sidebar and the product grid side-by-side */
+main {
+    display: flex;
+    padding: 20px;
+}
+
+/* Give the filter sidebar a fixed width on the left */
+aside.filters {
+    width: 250px;
+    padding-right: 20px;
+    flex-shrink: 0;
+}
+
+/* 6. make the product Grid cards wrap into neat rows */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap; /* Crucial: lets cards drop to the next line when they run out of space */
+    flex: 1;
 }
