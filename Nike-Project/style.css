@@ -50,3 +50,52 @@ aside.filters {
     flex-wrap: wrap; /* Crucial: lets cards drop to the next line when they run out of space */
     flex: 1;
 }
+
+/* 7. Style the top header bar using Flexbox */
+header {
+    background-color: #111;
+    display: flex;
+    justify-content: space-between; /* pushes logo to left. links to center, actions to right */
+    align-items: center;    /* vertically centers everything */
+    padding: 20px 40px;
+    border-bottom: 1px solid #333;
+}
+
+/* 8. turn the navigation list horizontal */
+header nav ul{
+    display: flex;
+    list-style: none; /* removes the ugly bullet options */
+    gap: 25px; /* puts nice spacing between the words */
+}
+
+/* 9. style the nav text links */
+header nav ul li a {
+    color: #fff;
+    text-decoration: none; /* removes the blue underline */
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+/* add a subtle hover effect when your mouse passes over a link */
+header nav ul li a:hover {
+    color: #fff;
+}
+
+/* 10. Create an invisible underline by default using pseudo-elements */
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;   /* starts at 0 width (invisible) */ 
+    height: 2px; /* thickness of the underline */
+    bottom: 0;
+    left: 0;
+    background-color: #888;
+    transition: width 0.3 ease;
+}
+
+/* 11. when you hover, grow the line to 100% width */
+header nav ul li a:hover::after {
+    width: 100%;
+}
