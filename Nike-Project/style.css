@@ -99,3 +99,47 @@ header nav ul li a::after {
 header nav ul li a:hover::after {
     width: 100%;
 }
+
+/* 11. Make the product card the relative anchor point */
+.product-card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    padding: 20px;
+    margin: 15px;
+    width: 300px;
+    border-radius: 8px;
+    position: relative; /* Critical: Anchors any absolute children inside it */
+}
+
+/* 12. Position the badge to float over the top-left of the card */
+.product-card .badge {
+    position: absolute;
+    top: 30px; /* Distance from the top of the card */
+    left: 30px; /* Distance from the left of the card */
+    background-color: #fff;
+    color: #000;
+    padding: 4px 8px;
+    font-size: 11px;
+    font-weight: bold;
+    font-weight: 4px;
+    text-transform: uppercase;
+}
+
+/* 13. Clean up the card typography */
+.product-card h3 {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.product-card p {
+    color: #888;
+    font-size: 14px;
+}
+
+.product-card .price {
+    color: #fff;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
