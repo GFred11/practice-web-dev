@@ -48,7 +48,9 @@ aside.filters {
 .product-grid {
     display: flex;
     flex-wrap: wrap; /* Crucial: lets cards drop to the next line when they run out of space */
+    gap: 20px;
     flex: 1;
+    max-width: 1100px; /* Limits how wide the grid can stretch, forcing cards to wrap into neat rows! */
 }
 
 /* 7. Style the top header bar using Flexbox */
@@ -105,7 +107,6 @@ header nav ul li a:hover::after {
     background-color: #1a1a1a;
     border: 1px solid #333;
     padding: 20px;
-    margin: 15px;
     width: 300px;
     border-radius: 8px;
     position: relative; /* Critical: Anchors any absolute children inside it */
@@ -143,3 +144,42 @@ header nav ul li a:hover::after {
     margin-top: 10px;
 }
 
+/* 14. Style the sidebar filter section */
+aside.filters {
+    width: 250px;
+    padding-right: 30px;
+    flex-shrink: 0;
+}
+
+aside.filters h2 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+aside.filters ul{
+    list-style: none; /* removes the numbers/ bullet points */
+}
+
+aside.filters ul li {
+    margin-bottom: 10px; /* Spreads out the list */
+}
+
+aside.filters ul li a {
+    color: #888; /* Muted grey text like nike's filters */
+    text-decoration: none; /* removes the blue underline */
+    font-size: 14px;
+}
+
+/* Make the filter text turn white when hovered on */
+aside.filters ul li a:hover {
+    color: #fff;
+}
+
+/* 15. Add an automatic gap to the product grid */
+.product-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex: 1;
+}
