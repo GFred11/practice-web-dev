@@ -205,3 +205,29 @@ header input[type="text"]:focus {
 header input[type="text"]::placeholder {
     color: #888;
 }
+
+/* 16. add a smooth transition to the card for hovering */
+.product-card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    padding: 20px;
+    width: 250px;
+    border-radius: 8px;
+    position: relative;
+    transition: border-color 0.3 ease, transform 0.3 ease; /* Smooths out the hover effect */
+}
+/* 17. when hovering over the card, brighten the border and lift it slightly */
+.product-card:hover {
+    border-color: #666; /*lighter border color*/
+    transform: translateY(-4px);/* Lifts the card up by 4 pixels! */
+}
+
+/* 18. Optional: make the shoe image subtly zoom in on hover */
+.product-card img {
+    width: 100%;
+    transition: transform 0.3 ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.03); /* tiny zoom effect */
+}
