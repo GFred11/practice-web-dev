@@ -183,3 +183,25 @@ aside.filters ul li a:hover {
     gap: 20px;
     flex: 1;
 }
+
+/* Style the header search input */
+header input[type="text"] {
+    background-color: #222;       /* Dark background to match the theme */
+    border: 1px solid #333;       /* Subtle border */
+    border-radius: 20px;          /* Gives it that nice rounded pill shape */
+    padding: 8px 15px;            /* Breathing room inside the box */
+    color: #fff;                  /* White text when you type */
+    font-size: 14px;
+    outline: none;                /* Removes the default ugly browser focus ring */
+    transition: border-color 0.3s ease; /* Smooth transition for clicking */
+}
+
+/* Make the border turn lighter grey when you click inside it */
+header input[type="text"]:focus {
+    border-color: #777;
+}
+
+/* Style the placeholder text color so it's not blinding white */
+header input[type="text"]::placeholder {
+    color: #888;
+}
