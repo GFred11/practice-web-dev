@@ -231,3 +231,21 @@ header input[type="text"]::placeholder {
 .product-card:hover img {
     transform: scale(1.03); /* tiny zoom effect */
 }
+
+/* Main content layout wrapper */
+.main-container {
+    display: flex;
+    max-width: 1200px;  /* Keeps the store content from stretching infinitely on giant monitors */
+    margin: 20px auto;  /* Centers the whole layout on the page with vertical space */
+    padding: 0 20px;    /* Adds side padding so it doesn't slam into browser edges */
+    gap: 30px;          /* Creates a neat gap between the sidebar and the product grid */
+}
+
+aside.filters {
+    width: 250px;
+    padding-right: 30px;
+    flex-shrink: 0;
+    position: sticky; /* Makes the sidebar stick in place during scroll */
+    top: 40px;        /* Distance from the top of the screen when it sticks */
+    align-self: flex-start; /* Ensures it doesn't stretch to match the grid height */
+}
